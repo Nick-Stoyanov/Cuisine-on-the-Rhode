@@ -1,0 +1,50 @@
+/* Base Button Styles */
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: 800;
+    color: white; /* Text color */
+    text-decoration: none;
+    border: 1px solid #f57c1d; /* Orange accent color */
+    border-radius: 15px;
+    background-color: #6e6e6e; /* Gray base color */
+    background-position: center;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover State */
+.button:hover {
+    background-color: #f57c1d; /* Bright orange for hover */
+    border-color: #d04f00; /* Darker orange highlight */
+    transform: scale(1.05); /* Subtle zoom effect */
+}
+
+/* Focus State */
+.button:focus {
+    outline: none; /* Remove default outline */
+    background-color: #d04f00; /* Darker orange for focus */
+    color: white; /* Ensure white text */
+    border-color: #d04f00; /* Match border with background */
+    transition: color 0.3s ease-out, background-color 0.3s ease-in-out;
+}
+
+/* Optional 'Corners' Styling (if used) */
+.corners {
+    background-size: 0% 0%;
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none; /* Disable animations */
+    }
+
+    .button:hover,
+    .button:focus {
+        transform: none; /* Remove scaling effect */
+        background-color: #f57c1d; /* Keep hover/focus styles */
+        color: white; /* Ensure text remains visible */
+    }
+}
