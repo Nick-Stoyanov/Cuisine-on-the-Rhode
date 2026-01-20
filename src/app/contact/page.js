@@ -24,7 +24,7 @@ export default function ContactPage() {
                         <p className="text-lg text-gray-800 mb-6">
                             Let's create a culinary experience like no other. Whether it's a
                             private dinner, event catering, or personalized tasting menus,
-                            Cuisine on the Rhode delivers unforgettable moments.
+                            Chef Nikolai delivers unforgettable moments.
                         </p>
                         <a
                             href="#contact-form"

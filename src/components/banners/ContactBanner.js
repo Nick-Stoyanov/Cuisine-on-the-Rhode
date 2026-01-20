@@ -7,7 +7,7 @@ const ContactBanner = () => {
             {/* Background Image */}
             <Image
                 src="/food-2.webp"
-                alt="Cuisine on the Rhode - Contact Us"
+                alt="Chef Nikolai - Contact"
                 fill
                 priority
                 className="object-cover" // Uses Tailwind to handle full cover

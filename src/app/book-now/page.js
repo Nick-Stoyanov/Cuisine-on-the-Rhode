@@ -22,8 +22,7 @@ const BookNowPage = () => {
                         Book Your Culinary Experience
                     </h1>
                     <p className="text-lg md:text-xl max-w-3xl">
-                        Plan your next unforgettable dining experience with Cuisine on the
-                        Rhode. Check our availability or contact us to reserve your event.
+                        Plan your next unforgettable dining experience with Chef Nikolai. Check our availability or contact us to reserve your event.
                     </p>
                 </div>
             </div>
@@ -31,14 +30,14 @@ const BookNowPage = () => {
             {/* Main Content */}
             <div className="container mx-auto px-4 py-12">
                 <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                    Thank you for your interest in booking with Cuisine on the Rhode! We're
+                    Thank you for your interest in booking with Chef Nikolai! We're
                     currently setting up our booking platform. In the meantime, take a look
                     at the calendar to check availability, and feel free to contact us at{" "}
                     <a
-                        href="mailto:info@cuisineontherhode.com"
+                        href="mailto:info@chefnikolai.com"
                         className="text-blue-600 hover:underline"
                     >
-                        info@cuisineontherhode.com
+                        info@chefnikolai.com
                     </a>{" "}
                     or{" "}
                     <a

@@ -9,7 +9,7 @@ function Footer() {
             <footer className="bg-gray-100 border-t border-gray-200 py-4">
                 <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
                     <div className="text-gray-600">
-                        © 2024 Copyright by Cuisine on the Rhode. All rights reserved.
+                        © 2026 Copyright by Chef Nikolai. All rights reserved.
                     </div>
                     <div className="mt-2 md:mt-0">
                         <Link

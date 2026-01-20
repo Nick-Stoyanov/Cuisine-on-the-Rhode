@@ -9,16 +9,16 @@ import "swiper/css/navigation"; // Optional: Navigation styles
 const BannerHero = () => {
     const slides = [
         {
-            src: "/food-1.webp",
-            alt: "Delicious pasta dish",
+            src: "/food-10.webp",
+            alt: "Delicious soup",
         },
         {
             src: "/food-2.webp",
-            alt: "Fresh Thai cuisine",
+            alt: "Dessert with ice cream",
         },
         {
-            src: "/food-7.webp",
-            alt: "Tacos for every occasion",
+            src: "/food-4.webp",
+            alt: "Ravioli with lobster",
         },
     ];
 
@@ -47,14 +47,7 @@ const BannerHero = () => {
                             className="object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                                Welcome to Cuisine on the Rhode
-                            </h1>
-                            <p className="text-xl md:text-2xl lg:text-3xl mt-4 max-w-2xl">
-                                Bringing unique culinary experiences from around the world to your table
-                            </p>
-                        </div>
+
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -15,14 +15,9 @@ function Navbar() {
             <div className="container mx-auto flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <Image
-                        src="/logo.png"
-                        alt="Cuisine on the Rhode Logo"
-                        width={40}
-                        height={40}
-                    />
+                    
                     <Link href="/" className="text-2xl font-serif">
-                        Cuisine on the Rhode
+                        Chef Nikolai
                     </Link>
                 </div>
 

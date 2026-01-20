@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-    title: "Cuisine on the Rhode",
+    title: "Chef Nikolai",
     description: "Created by Nikolai Stoyanov",
 };
 

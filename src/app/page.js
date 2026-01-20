@@ -9,6 +9,6 @@ export default function Home() {
 }
 
 export const metadata = {
-  title: "Cuisine on the Rhode",
-  description: "Private cooking and chef services based in Newport, Rhode Island",
+  title: "Chef Nikolai",
+  description: "Private chef services based in Newport, Rhode Island",
 };

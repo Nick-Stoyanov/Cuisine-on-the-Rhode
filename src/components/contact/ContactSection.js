@@ -10,20 +10,19 @@ const ContactSection = () => {
                     {/* Office Info and Google Map */}
                     <div className="w-full md:w-1/2 mb-6 md:mb-0">
                         <div className="text-center text-black md:text-left mb-6">
-                            <h2 className="text-2xl font-bold mb-2">Our Location</h2>
+                            <h2 className="text-2xl font-bold mb-2">Chef Nikolai</h2>
                             <p className="font-semibold">
-                                Cuisine on the Rhode
+                                Newport, RI
+
                             </p>
                             <p>
-                                Newport, RI
-                                <br />
-                                Phone: 401-855-8560
+                                401-855-8560
                             </p>
                         </div>
                         {/* Google Map iframe */}
                         <div className="w-full h-64 md:h-80 border rounded-md overflow-hidden">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.674743728043!2d-71.31329638468222!3d41.49010247925514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e446b2451e6f91%3A0x749fc768ace75df0!2sNewport%2C%20RI%2C%20USA!5e0!3m2!1sen!2sus!4v1701638556397!5m2!1sen!2sus"
+                                src="https://www.google.com/maps?q=Newport%2C%20RI&z=12&output=embed"
                                 style={{
                                     border: "0",
                                     width: "100%",

@@ -12,7 +12,7 @@ export default function AboutPage() {
             {/* About Section */}
             <section className="container mx-auto px-4 py-12">
                 <h2 className="text-3xl font-bold text-center mb-8">
-                    About Cuisine on the Rhode
+                    About Chef Nikolai
                 </h2>
 
                 {/* Responsive Grid Layout */}
@@ -21,7 +21,7 @@ export default function AboutPage() {
                     <div className="flex justify-center">
                         <Image
                             src="/thechef.webp"
-                            alt="About Cuisine on the Rhode"
+                            alt="About Chef Nikolai"
                             width={500}
                             height={300}
                             className="rounded-md shadow-lg w-full max-w-md"
@@ -31,7 +31,7 @@ export default function AboutPage() {
                     {/* Text Section */}
                     <div className="flex flex-col items-center text-gray-700 text-center md:text-left">
                         <p className="text-lg mb-6 max-w-lg mx-auto md:mx-0">
-                            At Cuisine on the Rhode, we bring the finest culinary experiences
+                            We bring the finest culinary experiences
                             directly to your table. From intimate dinners to grand celebrations,
                             Chef Nikolai combines creativity, fresh ingredients, and global
                             inspiration to craft unforgettable meals.
