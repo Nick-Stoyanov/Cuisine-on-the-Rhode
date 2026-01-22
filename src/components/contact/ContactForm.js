@@ -12,6 +12,7 @@ const ContactForm = () => {
     });
 
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -22,6 +23,9 @@ const ContactForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting) return;
+
+        setIsSubmitting(true);
 
         try {
             const res = await fetch("/api/contact", {
@@ -32,26 +36,47 @@ const ContactForm = () => {
                 body: JSON.stringify(formData),
             });
 
-            if (res.ok) {
-                const result = await res.text();
-                console.log(result.message);
-                setSubmitted(true);
-                toast.success("Thank you for submitting, we will reach out shortly!");
-                setFormData({
-                    fullname: "",
-                    email: "",
-                    phone: "",
-                    message: "",
-                });
-            } else {
-                console.error("Form submission failed.");
-                toast.error(
-                    "Error submitting form. Please reach out by phone or email."
-                );
+            const contentType = res.headers.get("content-type") || "";
+            let payload;
+            try {
+                if (contentType.includes("application/json")) {
+                    payload = await res.json();
+                } else {
+                    const text = await res.text();
+                    payload = text ? { message: text } : {};
+                }
+            } catch {
+                payload = {};
             }
+
+            if (!res.ok) {
+                console.error("Form submission failed.", {
+                    status: res.status,
+                    statusText: res.statusText,
+                    contentType,
+                    body: payload,
+                });
+                const msg =
+                    (payload && (payload.message || payload.error)) ||
+                    `Request failed (${res.status})`;
+                toast.error(typeof msg === "string" ? msg : "Error submitting form. Please reach out by phone or email.");
+                return;
+            }
+
+            console.log(payload?.message);
+            setSubmitted(true);
+            toast.success("Thank you for submitting, we will reach out shortly!");
+            setFormData({
+                fullname: "",
+                email: "",
+                phone: "",
+                message: "",
+            });
         } catch (err) {
             console.error("Error submitting form:", err);
             toast.error("Error submitting form. Please reach out by phone or email.");
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
@@ -114,7 +139,13 @@ const ContactForm = () => {
                             ></textarea>
                         </div>
                         <div className="text-center">
-                            <MyButton onClick={handleSubmit}>SUBMIT</MyButton>
+                            <MyButton
+                                type="submit"
+                                className={isSubmitting ? "opacity-60" : ""}
+                                disabled={isSubmitting}
+                            >
+                                {isSubmitting ? "SUBMITTING..." : "SUBMIT"}
+                            </MyButton>
                         </div>
                     </div>
                 </form>
