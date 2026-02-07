@@ -9,6 +9,11 @@ import "swiper/css/navigation"; // Optional: Navigation styles
 const BannerHero = () => {
     const slides = [
         {
+            src: "/thechef.webp",
+            alt: "Chef Nikolai",
+        },
+
+        {
             src: "/food-10.webp",
             alt: "Delicious soup",
         },
@@ -46,27 +51,27 @@ const BannerHero = () => {
                             priority
                             className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+                        <div className="absolute inset-0 "></div>
 
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            {/* Call to Action Buttons */}
+            {/* Call to Action Buttons *
             <div className="absolute bottom-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 z-10 w-full justify-center">
                 <a
                     href="tel:401-855-8560"
                     className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
                 >
-                    Call Us at 401-855-8560
+                    401-855-8560
                 </a>
                 <a
                     href="/contact"
                     className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
                 >
-                    Email Us
+                    nicklovestocook@gmail.com
                 </a>
-            </div>
+            </div> */}
         </div>
     );
 };

@@ -23,15 +23,9 @@ export default function ContactPage() {
                         />
                         <p className="text-lg text-gray-800 mb-6">
                             Let's create a culinary experience like no other. Whether it's a
-                            private dinner, event catering, or personalized tasting menus,
-                            Chef Nikolai delivers unforgettable moments.
+                            private dinner, event catering, or personalized tasting menus.
                         </p>
-                        <a
-                            href="#contact-form"
-                            className="inline-block px-8 py-4 bg-orange-600 text-white font-semibold rounded-md hover:bg-orange-700 transition duration-300"
-                        >
-                            Contact Us
-                        </a>
+
                     </div>
 
                     {/* Right Section */}
@@ -44,16 +38,11 @@ export default function ContactPage() {
                             className="rounded-md shadow-lg mb-6"
                         />
                         <p className="text-lg text-gray-800 mb-6">
-                            We're here to help you plan your next culinary adventure. Contact
-                            us to discuss your needs, whether it's a special occasion, a
+                            I'm here to help you plan your next culinary adventure. Contact
+                            to discuss your needs, whether it's a special occasion, a
                             casual gathering, or a once-in-a-lifetime event.
                         </p>
-                        <a
-                            href="tel:+14018558560"
-                            className="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
-                        >
-                            Call Us: (401) 855-8560
-                        </a>
+
                     </div>
                 </div>
             </section>

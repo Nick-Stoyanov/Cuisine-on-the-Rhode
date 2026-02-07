@@ -1,9 +1,10 @@
-import Image from "next/image";
 import BannerCarousel from "@/components/banners/CarouselBanner";
+import TestimonialSection from "@/components/testimonials/TestimonialSection";
 export default function Home() {
   return (
       <>
         <BannerCarousel />
+        <TestimonialSection />
       </>
   );
 }

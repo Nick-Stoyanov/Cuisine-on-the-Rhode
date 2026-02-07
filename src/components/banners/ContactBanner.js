@@ -24,16 +24,6 @@ const ContactBanner = () => {
                 <p className="text-xl md:text-2xl lg:text-3xl mt-4 max-w-2xl">
                     Contact us today to start planning your perfect dining experience.
                 </p>
-
-                {/* Call Us Button */}
-                <div className="mt-8">
-                    <a
-                        href="tel:401-855-8560"
-                        className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
-                    >
-                        Call Us at 401-855-8560
-                    </a>
-                </div>
             </div>
         </div>
     );

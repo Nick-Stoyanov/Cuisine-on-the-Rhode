@@ -46,6 +46,7 @@ function Navbar() {
                     >
                         About
                     </Link>
+                    { /*
                     <Link
                         href="/menus"
                         className={`block ${
@@ -56,6 +57,8 @@ function Navbar() {
                     >
                         Menus
                     </Link>
+
+
                     <Link
                         href="/book-now"
                         className={`block ${
@@ -66,6 +69,7 @@ function Navbar() {
                     >
                         Book Now
                     </Link>
+                    */}
                     <Link
                         href="/contact"
                         className={`block ${
