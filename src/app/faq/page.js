@@ -1,4 +1,4 @@
-"use client";
+import { Metadata } from 'next';
 
 export const metadata = {
     title: "FAQ - Private Chef Newport RI | Chef Nikolai",
