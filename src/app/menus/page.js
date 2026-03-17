@@ -21,7 +21,10 @@ const Menus = () => {
     return (
         <section className="bg-gray-100 py-12">
             <div className="container mx-auto px-4">
-                <h2 className="text-4xl font-bold text-black text-center mb-8">Sample Menus</h2>
+                <h1 className="text-4xl font-bold text-black text-center mb-8">Private Chef Menus - Newport, Rhode Island</h1>
+                <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Explore our curated dining experiences for private events, intimate dinners, and special occasions throughout Newport and Rhode Island.
+                </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {menus.map((menu, index) => (
                         <div
@@ -32,8 +35,8 @@ const Menus = () => {
                             {/* Image */}
                             <div className="h-48 w-full overflow-hidden">
                                 <img
-                                    src="/Pasta.webp"
-                                    alt={menu.title}
+                                    src="/newport-chef-fresh-pasta.webp"
+                                    alt={`${menu.title} - Private Chef Newport RI`}
                                     className="w-full h-full object-cover"
                                 />
                             </div>

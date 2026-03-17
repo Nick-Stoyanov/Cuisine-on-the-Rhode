@@ -2,6 +2,14 @@
 import Image from "next/image";
 import ContactBanner from "@/components/banners/ContactBanner";
 
+export const metadata = {
+    title: "Contact Chef Nikolai | Private Chef Newport RI",
+    description: "Contact Chef Nikolai for private chef services in Newport and Rhode Island. Book your culinary experience today.",
+    alternates: {
+        canonical: '/contact',
+    },
+};
+
 export default function ContactPage() {
     return (
         <div className="bg-gray-300 min-h-screen text-black">
@@ -15,8 +23,8 @@ export default function ContactPage() {
                     {/* Left Section */}
                     <div className="flex flex-col items-center justify-center text-center md:text-left">
                         <Image
-                            src="/food-9.webp"
-                            alt="Chef at Work"
+                            src="/chef-nikolai-newport-cuisine.webp"
+                            alt="Chef Nikolai Newport RI at work"
                             width={500}
                             height={300}
                             className="rounded-md shadow-lg mb-6"
@@ -31,8 +39,8 @@ export default function ContactPage() {
                     {/* Right Section */}
                     <div className="flex flex-col items-center justify-center text-center md:text-left">
                         <Image
-                            src="/food-8.webp"
-                            alt="Plated Dish"
+                            src="/newport-private-dining-entree.webp"
+                            alt="Private chef Newport RI plated dish"
                             width={500}
                             height={300}
                             className="rounded-md shadow-lg mb-6"

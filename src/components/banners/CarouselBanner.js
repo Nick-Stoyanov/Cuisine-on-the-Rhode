@@ -9,21 +9,21 @@ import "swiper/css/navigation"; // Optional: Navigation styles
 const BannerHero = () => {
     const slides = [
         {
-            src: "/thechef.webp",
-            alt: "Chef Nikolai",
+            src: "/chef-nikolai-newport-ri.webp",
+            alt: "Chef Nikolai - Private Chef in Newport, Rhode Island",
         },
 
         {
-            src: "/food-10.webp",
-            alt: "Delicious soup",
+            src: "/newport-chef-gourmet-soup.webp",
+            alt: "Gourmet soup by private chef Newport RI",
         },
         {
-            src: "/food-2.webp",
-            alt: "Dessert with ice cream",
+            src: "/newport-ri-private-chef-dessert.webp",
+            alt: "Artisan dessert - Private dining Newport Rhode Island",
         },
         {
-            src: "/food-4.webp",
-            alt: "Ravioli with lobster",
+            src: "/newport-chef-lobster-ravioli.webp",
+            alt: "Lobster ravioli by Newport private chef",
         },
     ];
 

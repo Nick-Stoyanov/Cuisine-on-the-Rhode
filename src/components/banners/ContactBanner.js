@@ -6,8 +6,8 @@ const ContactBanner = () => {
         <div className="relative h-[600px] md:h-[700px] lg:h-[800px] w-full">
             {/* Background Image */}
             <Image
-                src="/food-2.webp"
-                alt="Chef Nikolai - Contact"
+                src="/newport-ri-private-chef-dessert.webp"
+                alt="Contact Chef Nikolai - Private Chef Newport RI"
                 fill
                 priority
                 className="object-cover" // Uses Tailwind to handle full cover

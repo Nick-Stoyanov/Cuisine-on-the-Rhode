@@ -22,9 +22,9 @@ const TestimonialSection = () => {
                 </div>
 
                 <div className="max-w-5xl mx-auto mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {testimonials.map((testimonial) => (
+                    {testimonials.map((testimonial, index) => (
                         <figure
-                            key={`${testimonial.name}-${testimonial.date}`}
+                            key={index}
                             className="bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-sm h-full"
                         >
                             <blockquote className="text-lg text-gray-800 leading-relaxed">

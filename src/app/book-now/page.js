@@ -8,8 +8,8 @@ const BookNowPage = () => {
             {/* Hero Section */}
             <div className="relative h-[400px] w-full">
                 <Image
-                    src="/Pasta.webp" // Placeholder image
-                    alt="Book Your Culinary Experience"
+                    src="/newport-chef-fresh-pasta.webp"
+                    alt="Book Private Chef Newport RI - Chef Nikolai"
                     fill
                     priority
                     className="object-cover"

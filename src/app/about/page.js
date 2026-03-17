@@ -11,17 +11,17 @@ export default function AboutPage() {
 
             {/* About Section */}
             <section className="container mx-auto px-4 py-12">
-                <h2 className="text-3xl font-bold text-center mb-8">
-                    About Chef Nikolai
-                </h2>
+                <h1 className="text-3xl font-bold text-center mb-8">
+                    About Chef Nikolai - Private Chef in Newport, Rhode Island
+                </h1>
 
                 {/* Responsive Grid Layout */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     {/* Image Section */}
                     <div className="flex justify-center">
                         <Image
-                            src="/thechef.webp"
-                            alt="About Chef Nikolai"
+                            src="/chef-nikolai-newport-ri.webp"
+                            alt="Chef Nikolai - Private Chef Newport Rhode Island"
                             width={500}
                             height={300}
                             className="rounded-md shadow-lg w-full max-w-md"
@@ -31,10 +31,10 @@ export default function AboutPage() {
                     {/* Text Section */}
                     <div className="flex flex-col items-center text-gray-700 text-center md:text-left">
                         <p className="text-lg mb-6 max-w-lg mx-auto md:mx-0">
-                            Food and travel have always been among my greatest passions, and I strive to express that through my cooking. Through years of travel and hands-on experience in diverse kitchens, I’ve developed a style rooted in technique, curiosity, and respect for ingredients.
+                            As a private chef based in Newport, Rhode Island, food and travel have always been among my greatest passions, and I strive to express that through my cooking. Through years of travel and hands-on experience in diverse kitchens, I've developed a style rooted in technique, curiosity, and respect for ingredients.
 </p>
                         <p className="text-lg mb-6 max-w-lg mx-auto md:mx-0">
-                            Each meal I create draws inspiration from the places I’ve lived, eaten, and learned—bringing global flavors into a refined, thoughtful dining experience. I focus on seasonal ingredients and local producers to craft menus that feel personal, intentional, and memorable.
+                            Each meal I create draws inspiration from the places I've lived, eaten, and learned—bringing global flavors into a refined, thoughtful dining experience. Serving Newport and throughout Rhode Island, I focus on seasonal ingredients and local producers to craft personalized menus that feel personal, intentional, and memorable.
                         </p>
                         <Link
                             href="/contact"
