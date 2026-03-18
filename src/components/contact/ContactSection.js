@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import ContactForm from "../contact/ContactForm";
 
 const ContactSection = () => {
@@ -38,7 +38,9 @@ const ContactSection = () => {
                     {/* Contact Form */}
                     <div className="w-full md:w-1/2 text-gray-900">
                         <div className="bg-white p-6 rounded-md shadow-lg">
-                            <ContactForm />
+                            <Suspense fallback={<div>Loading...</div>}>
+                                <ContactForm />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
