@@ -1,19 +1,32 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import MyButton from "../my-button/MyButton";
 import { Toaster, toast } from "react-hot-toast";
 
 const ContactForm = () => {
+    const searchParams = useSearchParams();
+    const selectedMenu = searchParams.get("menu") || "";
+
     const [formData, setFormData] = useState({
         fullname: "",
         email: "",
         phone: "",
         date: "",
+        menuInterest: "",
         message: "",
     });
 
-    const [submitted, setSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
+
+    useEffect(() => {
+        if (!selectedMenu) return;
+
+        setFormData((prev) => ({
+            ...prev,
+            menuInterest: prev.menuInterest || selectedMenu,
+        }));
+    }, [selectedMenu]);
 
     const handleChange = (e) => {
         setFormData({
@@ -39,6 +52,7 @@ const ContactForm = () => {
 
             const contentType = res.headers.get("content-type") || "";
             let payload;
+
             try {
                 if (contentType.includes("application/json")) {
                     payload = await res.json();
@@ -57,21 +71,28 @@ const ContactForm = () => {
                     contentType,
                     body: payload,
                 });
+
                 const msg =
                     (payload && (payload.message || payload.error)) ||
                     `Request failed (${res.status})`;
-                toast.error(typeof msg === "string" ? msg : "Error submitting form. Please reach out by phone or email.");
+
+                toast.error(
+                    typeof msg === "string"
+                        ? msg
+                        : "Error submitting form. Please reach out by phone or email."
+                );
                 return;
             }
 
-            console.log(payload?.message);
-            setSubmitted(true);
             toast.success("Thank you for submitting, we will reach out shortly!");
+
+            // Reset EVERYTHING to blank after submit
             setFormData({
                 fullname: "",
                 email: "",
                 phone: "",
                 date: "",
+                menuInterest: "",
                 message: "",
             });
         } catch (err) {
@@ -98,6 +119,7 @@ const ContactForm = () => {
                             nicklovestocook@gmail.com
                         </a>
                     </h3>
+
                     <div className="space-y-4">
                         <div>
                             <label htmlFor="fullname" className="block font-semibold">
@@ -154,6 +176,22 @@ const ContactForm = () => {
                                 onChange={handleChange}
                             />
                         </div>
+
+                        {/* ONLY SHOW IF FROM MENU */}
+                        {selectedMenu && (
+                            <div>
+                                <label htmlFor="menuInterest" className="block font-semibold">
+                                    Interested In
+                                </label>
+                                <input
+                                    type="text"
+                                    id="menuInterest"
+                                    className="w-full border border-black p-2 rounded"
+                                    value={formData.menuInterest}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        )}
 
                         <div>
                             <label htmlFor="message" className="block font-semibold">

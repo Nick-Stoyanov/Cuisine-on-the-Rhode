@@ -11,7 +11,7 @@ export default function AboutPage() {
 
             {/* About Section */}
             <section className="container mx-auto px-4 py-12">
-                <h1 className="text-3xl font-bold text-center mb-8">
+                <h1 className="text-3xl font-bold text-center text-gray-700 mb-8">
                     About Chef Nikolai - Private Chef in Newport, Rhode Island
                 </h1>
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
                             As a private chef based in Newport, Rhode Island, food and travel have always been among my greatest passions, and I strive to express that through my cooking. Through years of travel and hands-on experience in diverse kitchens, I've developed a style rooted in technique, curiosity, and respect for ingredients.
 </p>
                         <p className="text-lg mb-6 max-w-lg mx-auto md:mx-0">
-                            Each meal I create draws inspiration from the places I've lived, eaten, and learned—bringing global flavors into a refined, thoughtful dining experience. Serving Newport and throughout Rhode Island, I focus on seasonal ingredients and local producers to craft personalized menus that feel personal, intentional, and memorable.
+                            Each meal I create draws inspiration from the places I've lived, eaten, and learned—bringing global flavors into a refined, thoughtful dining experience. Serving Newport and Southern New England, I focus on seasonal ingredients and local producers to craft personalized menus that feel personal, unique and memorable.
                         </p>
                         <Link
                             href="/contact"

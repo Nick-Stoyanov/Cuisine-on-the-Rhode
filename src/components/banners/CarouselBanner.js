@@ -1,79 +1,95 @@
 "use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import "swiper/css"; // Swiper core styles
-import "swiper/css/pagination"; // Optional: Pagination styles
-import "swiper/css/navigation"; // Optional: Navigation styles
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
-const BannerHero = () => {
-    const slides = [
-        {
-            src: "/chef-nikolai-newport-ri.webp",
-            alt: "Chef Nikolai - Private Chef in Newport, Rhode Island",
-        },
+const slides = [
+    {
+        src: "/chef-nikolai-newport-ri.webp",
+        alt: "Chef Nikolai preparing a private dining experience in Newport Rhode Island",
+    },
+    {
+        src: "/newport-private-dining-entree.webp",
+        alt: "Private chef plated entree in Newport Rhode Island",
+    },
+    {
+        src: "/private-chef-newport-seafood.webp",
+        alt: "Seafood dish prepared by a private chef in Newport Rhode Island",
+    },
+    {
+        src: "/newport-ri-private-chef-dessert.webp",
+        alt: "Dessert from a private chef dining experience in Newport Rhode Island",
+    },
+];
 
-        {
-            src: "/newport-chef-gourmet-soup.webp",
-            alt: "Gourmet soup by private chef Newport RI",
-        },
-        {
-            src: "/newport-ri-private-chef-dessert.webp",
-            alt: "Artisan dessert - Private dining Newport Rhode Island",
-        },
-        {
-            src: "/newport-chef-lobster-ravioli.webp",
-            alt: "Lobster ravioli by Newport private chef",
-        },
-    ];
-
+export default function CarouselBanner() {
     return (
-        <div className="relative h-[600px] md:h-[700px] lg:h-[800px] w-full">
+        <section className="relative h-[80vh] min-h-[560px] w-full overflow-hidden">
             <Swiper
-                modules={[Autoplay, Pagination, Navigation]}
-                spaceBetween={0}
+                modules={[Autoplay, Pagination, EffectFade]}
+                effect="fade"
                 slidesPerView={1}
-                loop={true}
+                loop
                 autoplay={{
-                    delay: 2500,
+                    delay: 4500,
                     disableOnInteraction: false,
                 }}
                 pagination={{ clickable: true }}
-                navigation={true}
-                className="h-full"
+                className="h-full w-full"
             >
-                {slides.map((slide, index) => (
-                    <SwiperSlide key={index} className="relative h-full">
+                {slides.map((slide) => (
+                    <SwiperSlide key={slide.src} className="relative h-full w-full">
                         <Image
                             src={slide.src}
                             alt={slide.alt}
                             fill
                             priority
                             className="object-cover"
+                            sizes="100vw"
                         />
-                        <div className="absolute inset-0 "></div>
-
+                        <div className="absolute inset-0 bg-black/45" />
                     </SwiperSlide>
                 ))}
             </Swiper>
 
-            {/* Call to Action Buttons *
-            <div className="absolute bottom-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 z-10 w-full justify-center">
-                <a
-                    href="tel:401-855-8560"
-                    className="px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
-                >
-                    401-855-8560
-                </a>
-                <a
-                    href="/contact"
-                    className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105 text-center"
-                >
-                    nicklovestocook@gmail.com
-                </a>
-            </div> */}
-        </div>
-    );
-};
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-6">
+                <div className="mx-auto max-w-4xl text-center text-white">
+                    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-orange-300 md:text-base">
+                        Private Dining • Events • Seasonal Menus
+                    </p>
 
-export default BannerHero;
+                    <h1 className="mb-6 text-4xl font-bold leading-tight md:text-6xl">
+                        Private Chef in Newport, Rhode Island
+                    </h1>
+
+                    <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-gray-100 md:text-xl">
+                        Seasonal, personalized dining experiences for intimate dinners,
+                        celebrations, vacation stays, and special events across Newport and
+                        Southern New England.
+                    </p>
+
+                    <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                        <Link
+                            href="/contact"
+                            className="inline-flex min-w-[200px] items-center justify-center rounded-full bg-orange-600 px-8 py-4 text-base font-semibold text-white transition hover:bg-orange-700"
+                        >
+                            Inquire Now
+                        </Link>
+
+                        <Link
+                            href="/menus"
+                            className="inline-flex min-w-[200px] items-center justify-center rounded-full border border-white/80 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white/20"
+                        >
+                            View Sample Menus
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
